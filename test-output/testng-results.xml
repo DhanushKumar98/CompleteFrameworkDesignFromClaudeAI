@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-30T15:22:20 IST" name="Default suite" finished-at="2026-04-30T15:22:32 IST" duration-ms="11502">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.validLoginRedirectsToHome()[pri:-1, instance:com.test.LoginTest@6cc4cdb9]" name="validLoginRedirectsToHome" class="com.test.LoginTest"/>
+        <method signature="LoginTest.invalidLoginShowsError(java.lang.String,java.lang.String)[pri:0, instance:com.test.LoginTest@6cc4cdb9]" name="invalidLoginShowsError" class="com.test.LoginTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.validLoginRedirectsToHome()[pri:-1, instance:com.test.LoginTest@6cc4cdb9]" name="validLoginRedirectsToHome" class="com.test.LoginTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2026-04-30T15:22:20 IST" name="Default test" finished-at="2026-04-30T15:22:32 IST" duration-ms="11502">
+      <class name="com.test.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:20 IST" name="setUp" finished-at="2026-04-30T15:22:23 IST" duration-ms="2752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLoginRedirectsToHome()[pri:-1, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:23 IST" name="validLoginRedirectsToHome" finished-at="2026-04-30T15:22:24 IST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginRedirectsToHome -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:24 IST" name="tearDown" finished-at="2026-04-30T15:22:24 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:24 IST" name="setUp" finished-at="2026-04-30T15:22:26 IST" duration-ms="2243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginShowsError(java.lang.String,java.lang.String)[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:26 IST" name="invalidLoginShowsError" data-provider="invalidCreds" finished-at="2026-04-30T15:22:27 IST" duration-ms="401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wrong@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Secret123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:27 IST" name="tearDown" finished-at="2026-04-30T15:22:27 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:27 IST" name="setUp" finished-at="2026-04-30T15:22:29 IST" duration-ms="1825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginShowsError(java.lang.String,java.lang.String)[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:29 IST" name="invalidLoginShowsError" data-provider="invalidCreds" finished-at="2026-04-30T15:22:29 IST" duration-ms="340" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:29 IST" name="tearDown" finished-at="2026-04-30T15:22:29 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:29 IST" name="setUp" finished-at="2026-04-30T15:22:31 IST" duration-ms="2246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginShowsError(java.lang.String,java.lang.String)[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:31 IST" name="invalidLoginShowsError" data-provider="invalidCreds" finished-at="2026-04-30T15:22:32 IST" duration-ms="336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.LoginTest@6cc4cdb9]" started-at="2026-04-30T15:22:32 IST" name="tearDown" finished-at="2026-04-30T15:22:32 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
