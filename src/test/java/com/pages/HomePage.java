@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.BasePage;
+import com.utility.JSUtils;
 
 public class HomePage extends BasePage {
 
@@ -18,7 +19,7 @@ public class HomePage extends BasePage {
 	@FindBy(css = "#react-burger-menu-btn")
 	private WebElement menuBtn;
 
-	@FindBy(id = "logout_sidebar_link")
+	@FindBy(xpath = "//a[contains(.,'Logout')]")
 	private WebElement logOutBtn;
 
 	public HomePage(WebDriver driver) {
@@ -31,7 +32,11 @@ public class HomePage extends BasePage {
 
 	public LoginPage logout() {
 		click(menuBtn);
-		click(logOutBtn);
+		
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+        .until(ExpectedConditions.visibilityOf(logOutBtn));
+		
+		JSUtils.jsClick(driver,logOutBtn);
 		
 		//driver.navigate().refresh();
 		
