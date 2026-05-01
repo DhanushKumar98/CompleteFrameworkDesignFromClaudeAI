@@ -1,0 +1,12 @@
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\base\BasePage.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\base\BaseTest.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\config\BrowserFactory.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\config\ConfigReader.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\config\DriverManager.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\Listeners\RetryAnalyzer.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\Listeners\TestListener.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\pages\HomePage.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\pages\LoginPage.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\test\LoginTest.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\utility\ScreenshotUtils.java
+B:\WorkSpace For Eclipse\CompleteFrameworkDesignFromClaudeAI\src\test\java\com\utility\WaitUtils.java

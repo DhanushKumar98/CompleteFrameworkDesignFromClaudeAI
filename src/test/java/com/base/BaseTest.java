@@ -21,8 +21,11 @@ public class BaseTest {
 	
 	@BeforeMethod
 	public void setUp() {
-		// DriverManager uses ThreadLocal - Safe for Parallel runs 
+		
+		DriverManager.initDriver();  // MUST BE FIRST
+		
 		driver = DriverManager.getDriver();
+		
 		driver.manage().window().maximize();
 		driver.get(ConfigReader.get("base.url"));
 	}
