@@ -15,7 +15,11 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+		String name = result.getMethod().getMethodName();
 		System.out.printf("[PASS] %s%n,", result.getMethod().getMethodName());
+		
+		// Capture screenshot and attach to allure
+		 ScreenshotUtils.capture(DriverManager.getDriver(), name + "_PASS");
 
 	}
 
@@ -26,13 +30,15 @@ public class TestListener implements ITestListener {
 
 		// Capture screenshot and attach to allure
 
-		ScreenshotUtils.capture(DriverManager.getDriver(), name);
+		ScreenshotUtils.capture(DriverManager.getDriver(), name + "_FAIL");
 
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		System.out.printf("[SKIP] %s reason: %s%n", result.getMethod().getMethodName(),
-				result.getThrowable() != null ? result.getThrowable().getMessage() : "n/a");
+		  String name = result.getMethod().getMethodName();
+		    System.out.printf("[SKIP] %s%n", name);
+
+		    ScreenshotUtils.capture(DriverManager.getDriver(), name + "_SKIP");
 	}
 }
