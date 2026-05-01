@@ -1,9 +1,14 @@
 package com.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.BasePage;
 
@@ -21,6 +26,8 @@ public class LoginPage extends BasePage{
 	
 	@FindBy(xpath = "//h3[contains(.,'Epic sadface:')]")
 	private WebElement errorMessage;
+	
+	private By loginBtn = By.id("login-button");
 	
 	
 	public LoginPage(WebDriver driver) {
@@ -44,18 +51,30 @@ public class LoginPage extends BasePage{
 	}
 	
 	// Safe check (Important)
-	public boolean getErrorVisible() {
-		return driver.findElements(By.cssSelector("h3[data-test='error']")
-				).size() > 0;
+	public String getErrorMessage() {
+		return errorMessage.getText();
 	}
 	
 	public boolean isErrorVisible() {
-		try {
 		return errorMessage.isDisplayed();
-		}catch(Exception e) {
-			return false;
-		}
 	}
+	
+	
+	public boolean isLoginBtnDisplayed() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		          
+		 try {
+			 return wait.until(
+				ExpectedConditions.presenceOfElementLocated(loginBtn)
+					 ).isDisplayed();
+		 }catch(TimeoutException e) {
+			 return false;
+		 }
+		 
+		 
+		 
+	}
+		
 	
 	
 	

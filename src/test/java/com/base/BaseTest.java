@@ -10,6 +10,7 @@ import org.testng.annotations.Listeners;
 import com.Listeners.TestListener;
 import com.config.ConfigReader;
 import com.config.DriverManager;
+import com.pages.HomePage;
 
 
 
@@ -33,6 +34,15 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void tearDown() {
+		 try {
+		        HomePage home = new HomePage(driver);
+
+		        if (home.isDisplayed()) { // user is logged in
+		            home.logout();
+		        }
+		    } catch (Exception e) {
+		        // ignore if already logged out
+		    }
 		// Always quit to free browser process and clear ThrealLocal
 		DriverManager.quit();
 	}

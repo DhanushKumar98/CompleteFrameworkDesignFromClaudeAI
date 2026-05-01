@@ -1,8 +1,12 @@
 package com.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.BasePage;
 
@@ -19,7 +23,6 @@ public class HomePage extends BasePage {
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-
 	}
 
 	public boolean isDisplayed() {
@@ -29,8 +32,13 @@ public class HomePage extends BasePage {
 	public LoginPage logout() {
 		click(menuBtn);
 		click(logOutBtn);
+		
+		//driver.navigate().refresh();
+		
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+        .until(ExpectedConditions.urlContains("saucedemo"));
+		
 		return new LoginPage(driver);
 	}
 	
-
 }

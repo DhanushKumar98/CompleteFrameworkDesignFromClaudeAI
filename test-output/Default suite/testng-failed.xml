@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="invalidLoginShowsError" invocation-numbers="0 2 3 4 5"/>
+          <include name="validLoginRedirectsToHome"/>
         </methods>
       </class> <!-- com.test.LoginTest -->
     </classes>
